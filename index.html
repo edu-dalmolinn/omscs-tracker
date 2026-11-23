@@ -1,0 +1,280 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>OMSCS Tracker</title>
+<style>
+  :root {
+    --bg: #f6f7f9;
+    --surface: #ffffff;
+    --border: #e2e5ea;
+    --text: #1b1f24;
+    --muted: #5f6873;
+    --accent: #2f6fdf;
+    --done: #1f9d55;
+    --late: #d64545;
+    --milestone: #b7791f;
+    --track: #e9ecf0;
+    --area-1: #2f6fdf;
+    --area-2: #8b5cf6;
+    --area-3: #0e9f9a;
+    --area-4: #6b7280;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #0f1216;
+      --surface: #171b21;
+      --border: #2a3038;
+      --text: #e6e9ed;
+      --muted: #9aa4af;
+      --accent: #6b9cf5;
+      --done: #3fbf7a;
+      --late: #f07171;
+      --milestone: #e0a84a;
+      --track: #262c34;
+      --area-1: #6b9cf5;
+      --area-2: #a78bfa;
+      --area-3: #2fc6c0;
+      --area-4: #9aa4af;
+    }
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    font: 15px/1.5 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  }
+  main { max-width: 860px; margin: 0 auto; padding: 24px 16px 64px; }
+  h1 { font-size: 1.5rem; margin: 0 0 4px; }
+  .sub { color: var(--muted); margin: 0 0 20px; }
+  a { color: var(--accent); }
+  .stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 12px; margin-bottom: 16px; }
+  .card { background: var(--surface); border: 1px solid var(--border); border-radius: 10px; padding: 14px 16px; }
+  .stat-label { color: var(--muted); font-size: .8rem; text-transform: uppercase; letter-spacing: .04em; }
+  .stat-value { font-size: 1.6rem; font-weight: 650; font-variant-numeric: tabular-nums; }
+  .stat-value.late { color: var(--late); }
+  .bar { height: 8px; background: var(--track); border-radius: 99px; overflow: hidden; }
+  .bar > span { display: block; height: 100%; border-radius: 99px; background: var(--accent); }
+  .areas { display: grid; gap: 10px; margin-bottom: 24px; }
+  .area-row { display: grid; grid-template-columns: 110px 1fr 70px; gap: 10px; align-items: center; font-size: .9rem; }
+  .area-row .num { text-align: right; color: var(--muted); font-variant-numeric: tabular-nums; }
+  .toolbar { display: flex; flex-wrap: wrap; gap: 8px; justify-content: space-between; align-items: center; margin-bottom: 12px; }
+  .toolbar h2 { font-size: 1.1rem; margin: 0; }
+  .btn { display: inline-block; padding: 6px 12px; border: 1px solid var(--border); border-radius: 8px; background: var(--surface); color: var(--text); text-decoration: none; font-size: .85rem; cursor: pointer; }
+  details.week { background: var(--surface); border: 1px solid var(--border); border-radius: 10px; margin-bottom: 10px; }
+  details.week.current { border-color: var(--accent); box-shadow: 0 0 0 1px var(--accent); }
+  details.week.late { border-left: 4px solid var(--late); }
+  summary { list-style: none; cursor: pointer; padding: 12px 16px; display: grid; grid-template-columns: 1fr auto; gap: 4px 12px; align-items: center; }
+  summary::-webkit-details-marker { display: none; }
+  .w-title { font-weight: 600; }
+  .w-meta { color: var(--muted); font-size: .85rem; }
+  .w-count { font-variant-numeric: tabular-nums; color: var(--muted); font-size: .85rem; text-align: right; }
+  summary .bar { grid-column: 1 / -1; height: 6px; }
+  .badge { display: inline-block; font-size: .7rem; font-weight: 600; padding: 1px 7px; border-radius: 99px; margin-left: 6px; vertical-align: 2px; color: #fff; }
+  .badge.current { background: var(--accent); }
+  .badge.late { background: var(--late); }
+  .badge.done { background: var(--done); }
+  .w-body { padding: 0 16px 14px; }
+  .group { margin-top: 10px; }
+  .group-name { font-size: .78rem; font-weight: 600; text-transform: uppercase; letter-spacing: .04em; margin-bottom: 4px; }
+  ul.tasks { list-style: none; margin: 0; padding: 0; }
+  ul.tasks li { display: grid; grid-template-columns: 20px 1fr; gap: 6px; padding: 3px 0; }
+  .box { width: 16px; height: 16px; margin-top: 3px; border: 2px solid var(--muted); border-radius: 4px; display: grid; place-items: center; font-size: 11px; color: #fff; }
+  li.done .box { background: var(--done); border-color: var(--done); }
+  li.done .t { color: var(--muted); text-decoration: line-through; }
+  li.overdue .box { border-color: var(--late); }
+  li.milestone:not(.done) .t strong { color: var(--milestone); }
+  .entrega { margin-top: 12px; padding-top: 10px; border-top: 1px dashed var(--border); color: var(--muted); font-size: .9rem; }
+  .error { color: var(--late); }
+  footer { margin-top: 24px; color: var(--muted); font-size: .8rem; }
+  @media (max-width: 480px) { .area-row { grid-template-columns: 90px 1fr 56px; } }
+</style>
+</head>
+<body>
+<main>
+  <h1 id="title">OMSCS Tracker</h1>
+  <p class="sub" id="subtitle">Carregando tasks.md…</p>
+  <section class="stats" id="stats"></section>
+  <section class="card areas" id="areas"></section>
+  <div class="toolbar">
+    <h2>Semanas</h2>
+    <span>
+      <button class="btn" id="toggle">Expandir tudo</button>
+      <a class="btn" id="edit" href="#">Editar tasks.md</a>
+    </span>
+  </div>
+  <section id="weeks"></section>
+  <footer>Fonte: <code>tasks.md</code>. Marque <code>[x]</code> no arquivo e faça o commit; o GitHub Pages leva cerca de 1 minuto para atualizar.</footer>
+</main>
+<script>
+  // Datas fixas da candidatura (meta pessoal e prazo oficial às 23h59 ET = 04h59 UTC do dia seguinte).
+  const META_ENVIO = new Date(2027, 1, 20, 23, 59);
+  const PRAZO_OFICIAL = new Date(Date.UTC(2027, 2, 2, 4, 59));
+  const AREA_COLORS = ['--area-1', '--area-2', '--area-3', '--area-4'];
+
+  const today = new Date();
+  const DAY = 86400000;
+
+  function escapeHtml(s) {
+    return s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
+  }
+
+  function inline(md) {
+    return escapeHtml(md)
+      .replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>')
+      .replace(/`(.+?)`/g, '<code>$1</code>')
+      .replace(/\[(.+?)\]\((.+?)\)/g, '<a href="$2">$1</a>');
+  }
+
+  // Lê datas como "23 a 29/11/2026", "30/11 a 06/12" ou "01/03/2027".
+  // O ano ausente é inferido em ordem: se o mês recua, avança o ano.
+  function makeDateParser() {
+    let year = null, month = null;
+    return function (title) {
+      const range = title.match(/(\d{1,2})(?:\/(\d{1,2}))?(?:\/(\d{4}))?\s+a\s+(\d{1,2})\/(\d{1,2})(?:\/(\d{4}))?/);
+      const single = title.match(/(\d{1,2})\/(\d{1,2})(?:\/(\d{4}))?/);
+      if (!range && !single) return {};
+      const [ed, em, ey0] = range ? [range[4], range[5], range[6]] : [single[1], single[2], single[3]];
+      let ey = ey0 ? +ey0 : (year ?? today.getFullYear());
+      if (!ey0 && month && +em < month) ey++;
+      year = ey; month = +em;
+      const end = new Date(ey, em - 1, +ed, 23, 59, 59);
+      if (!range) return { start: new Date(ey, em - 1, +ed), end };
+      const sm = range[2] ? +range[2] : +em;
+      const sy = range[3] ? +range[3] : (sm > +em ? ey - 1 : ey);
+      return { start: new Date(sy, sm - 1, +range[1]), end };
+    };
+  }
+
+  function parse(md) {
+    const doc = { title: '', weeks: [] };
+    const parseDates = makeDateParser();
+    let week = null, group = 'Geral';
+    for (const raw of md.split(/\r?\n/)) {
+      const line = raw.trim();
+      let m;
+      if ((m = line.match(/^# (.+)/))) { doc.title = m[1]; continue; }
+      if ((m = line.match(/^## (.+)/))) {
+        const [label, rest = ''] = m[1].split(' — ');
+        const [dates, theme = ''] = rest.split(' · ');
+        week = { label, dates, theme, tasks: [], entrega: '', ...parseDates(m[1]) };
+        group = 'Geral';
+        doc.weeks.push(week);
+        continue;
+      }
+      if (!week) continue;
+      if ((m = line.match(/^\*\*([^*]+)\*\*$/))) { group = m[1]; continue; }
+      if ((m = line.match(/^[-*] \[([ xX])\] (.+)/))) {
+        week.tasks.push({ done: m[1] !== ' ', text: m[2], group, milestone: m[2].includes('**') });
+        continue;
+      }
+      if ((m = line.match(/^\*\*Entrega:\*\*\s*(.+)/))) week.entrega = m[1];
+    }
+    for (const w of doc.weeks) {
+      w.total = w.tasks.length;
+      w.doneCount = w.tasks.filter(t => t.done).length;
+      w.past = w.end && w.end < today;
+      w.current = w.start && w.start <= today && today <= w.end;
+      w.late = w.past && w.doneCount < w.total;
+      w.complete = w.total > 0 && w.doneCount === w.total;
+    }
+    return doc;
+  }
+
+  const pct = (a, b) => (b ? Math.round((a / b) * 100) : 0);
+  const bar = (p, color = 'var(--accent)') => `<div class="bar"><span style="width:${p}%;background:${color}"></span></div>`;
+  const daysUntil = d => Math.max(0, Math.ceil((d - today) / DAY));
+
+  function render(doc) {
+    document.getElementById('title').textContent = doc.title || 'OMSCS Tracker';
+    document.getElementById('subtitle').textContent =
+      `Atualizado em ${today.toLocaleDateString('pt-BR')} · prazo oficial 01/03/2027, 23h59 ET`;
+
+    const all = doc.weeks.flatMap(w => w.tasks);
+    const done = all.filter(t => t.done).length;
+    const overdue = doc.weeks.filter(w => w.past).flatMap(w => w.tasks).filter(t => !t.done).length;
+    // Fora de uma semana do cronograma, mostra a próxima.
+    const current = doc.weeks.find(w => w.current) || doc.weeks.find(w => w.start && w.start > today);
+
+    document.getElementById('stats').innerHTML = `
+      <div class="card"><div class="stat-label">Progresso geral</div>
+        <div class="stat-value">${pct(done, all.length)}%</div>${bar(pct(done, all.length))}
+        <div class="w-meta">${done} de ${all.length} tarefas</div></div>
+      <div class="card"><div class="stat-label">${current && !current.current ? 'Próxima semana' : 'Semana atual'}</div>
+        <div class="stat-value">${current ? escapeHtml(current.label.replace('Semana ', 'S')) : '—'}</div>
+        <div class="w-meta">${current ? `${current.doneCount}/${current.total} · ${escapeHtml(current.theme)}` : 'fora do cronograma'}</div></div>
+      <div class="card"><div class="stat-label">Atrasadas</div>
+        <div class="stat-value ${overdue ? 'late' : ''}">${overdue}</div>
+        <div class="w-meta">de semanas já encerradas</div></div>
+      <div class="card"><div class="stat-label">Dias até o envio</div>
+        <div class="stat-value">${daysUntil(META_ENVIO)}</div>
+        <div class="w-meta">meta 20/02 · prazo em ${daysUntil(PRAZO_OFICIAL)} dias</div></div>`;
+
+    const areas = [...new Set(all.map(t => t.group))].filter(g => g !== 'Geral');
+    document.getElementById('areas').innerHTML = areas.map((g, i) => {
+      const ts = all.filter(t => t.group === g);
+      const d = ts.filter(t => t.done).length;
+      const color = `var(${AREA_COLORS[i % AREA_COLORS.length]})`;
+      return `<div class="area-row"><span>${escapeHtml(g)}</span>${bar(pct(d, ts.length), color)}<span class="num">${d}/${ts.length}</span></div>`;
+    }).join('');
+
+    const areaColor = g => {
+      const i = areas.indexOf(g);
+      return i < 0 ? 'var(--area-4)' : `var(${AREA_COLORS[i % AREA_COLORS.length]})`;
+    };
+
+    document.getElementById('weeks').innerHTML = doc.weeks.map(w => {
+      const badge = w.current ? '<span class="badge current">agora</span>'
+        : w.complete ? '<span class="badge done">concluída</span>'
+        : w.late ? '<span class="badge late">atrasada</span>' : '';
+      const groups = [...new Set(w.tasks.map(t => t.group))];
+      const body = groups.map(g => `
+        <div class="group"><div class="group-name" style="color:${areaColor(g)}">${escapeHtml(g)}</div>
+          <ul class="tasks">${w.tasks.filter(t => t.group === g).map(t => `
+            <li class="${t.done ? 'done' : ''} ${w.past && !t.done ? 'overdue' : ''} ${t.milestone ? 'milestone' : ''}">
+              <span class="box">${t.done ? '✓' : ''}</span><span class="t">${inline(t.text)}</span></li>`).join('')}
+          </ul></div>`).join('');
+      const open = w.current || w.late;
+      return `
+        <details class="week ${w.current ? 'current' : ''} ${w.late ? 'late' : ''}" ${open ? 'open' : ''}>
+          <summary>
+            <div><span class="w-title">${escapeHtml(w.label)}</span>${badge}
+              <div class="w-meta">${escapeHtml([w.dates, w.theme].filter(Boolean).join(' · '))}</div></div>
+            <div class="w-count">${w.doneCount}/${w.total}</div>
+            ${bar(pct(w.doneCount, w.total), w.complete ? 'var(--done)' : 'var(--accent)')}
+          </summary>
+          <div class="w-body">${body}${w.entrega ? `<div class="entrega"><strong>Entrega:</strong> ${inline(w.entrega)}</div>` : ''}</div>
+        </details>`;
+    }).join('');
+
+    document.querySelector('details.week.current')?.scrollIntoView({ block: 'start' });
+  }
+
+  // Link de edição derivado da URL do GitHub Pages: <usuario>.github.io/<repo>/
+  const owner = location.hostname.split('.')[0];
+  const repo = location.pathname.split('/').filter(Boolean)[0];
+  if (location.hostname.endsWith('github.io') && repo) {
+    document.getElementById('edit').href = `https://github.com/${owner}/${repo}/edit/main/tasks.md`;
+  } else {
+    document.getElementById('edit').style.display = 'none';
+  }
+
+  let expanded = false;
+  document.getElementById('toggle').addEventListener('click', e => {
+    expanded = !expanded;
+    document.querySelectorAll('details.week').forEach(d => { d.open = expanded; });
+    e.target.textContent = expanded ? 'Recolher tudo' : 'Expandir tudo';
+  });
+
+  fetch(`tasks.md?t=${Date.now()}`, { cache: 'no-store' })
+    .then(r => { if (!r.ok) throw new Error(r.status); return r.text(); })
+    .then(md => render(parse(md)))
+    .catch(err => {
+      document.getElementById('subtitle').innerHTML =
+        `<span class="error">Não foi possível carregar tasks.md (${escapeHtml(String(err.message))}). Abra a página por um servidor, não direto do arquivo.</span>`;
+    });
+</script>
+</body>
+</html>
