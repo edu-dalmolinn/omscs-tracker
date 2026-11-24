@@ -12,7 +12,7 @@ Semanas de segunda a domingo.
 ## Semana 1 — 23 a 29/11/2026 · Diagnóstico
 
 **Computação**
-- [ ] Pedir à UnB as ementas ou planos de ensino das turmas cursadas: CIC0007, EST0001, EPR0072, EPR0027 (2025.2), EPR0022, EPR0066 e EPR0004.
+- [x] Pedir à UnB as ementas ou planos de ensino das turmas cursadas: CIC0007, EST0001, EPR0072, EPR0027 (2025.2), EPR0022, EPR0066 e EPR0004.
 - [ ] Revisar o que você lembra de CIC0007 e EST0001: linguagem usada, projetos e se houve recursão ou estruturas de dados.
 
 **IELTS**
@@ -20,7 +20,7 @@ Semanas de segunda a domingo.
 - [ ] Registrar a nota por habilidade e comparar com o mínimo: geral 7,5; L/R/S 6,5; W 5,5.
 
 **Documentos**
-- [ ] Localizar o diploma e verificar quais documentos em inglês a UnB oferece.
+- [x] Localizar o diploma e verificar quais documentos em inglês a UnB oferece.
 - [ ] Ler as orientações oficiais de tradução e envio de documentos internacionais.
 - [ ] Confirmar as 18 h/semana e o orçamento da preparação (exame, traduções, certificados).
 - [ ] Preparar o e-mail convite para os três recomendantes.
