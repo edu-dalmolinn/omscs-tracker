@@ -13,7 +13,7 @@ Semanas de segunda a domingo.
 
 **Computação**
 - [x] Pedir à UnB as ementas ou planos de ensino das turmas cursadas: CIC0007, EST0001, EPR0072, EPR0027 (2025.2), EPR0022, EPR0066 e EPR0004.
-- [ ] Revisar o que você lembra de CIC0007 e EST0001: linguagem usada, projetos e se houve recursão ou estruturas de dados.
+- [x] Revisar o que você lembra de CIC0007 e EST0001: linguagem usada, projetos e se houve recursão ou estruturas de dados.
 
 **IELTS**
 - [ ] Fazer um simulado completo de IELTS Academic com correção de Writing e Speaking.

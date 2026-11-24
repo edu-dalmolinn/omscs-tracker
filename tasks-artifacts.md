@@ -48,13 +48,18 @@ O "histórico completo" da UnB já traz a ementa da maioria das disciplinas. A t
 
 | Disciplina | Fonte | O que comprova | O que **não** comprova |
 |---|---|---|---|
-| **CIC0007**, Introdução à Ciência da Computação (60 h) | Histórico | Pensamento computacional, variáveis, condicionais, laços, vetores, funções, estruturas heterogêneas e arquivos | Recursão, estruturas de dados, complexidade, OO. A linguagem não é citada |
+| **CIC0007**, Introdução à Ciência da Computação (60 h) | Histórico e relato sobre a turma | Programação em **Python**: pensamento computacional, variáveis, condicionais, laços, vetores, funções, estruturas heterogêneas e arquivos | Recursão, estruturas de dados, complexidade, OO. |
 | **EST0001**, Computação em Estatística 1 (30 h) | Histórico | Programação em **R**: importação e manipulação de dados, estatística descritiva e visualização | Programação de propósito geral |
 | **EPR0072**, Sistemas de Informação em Eng. de Produção (60 h) | Histórico | Sistemas de informação, ERP/CRM, DSS e noções de IA empresarial | Programação (o foco é gerencial) |
 | **EPR0066**, Pesquisa Operacional em Engenharia 1 (90 h) | Histórico | Programação linear, inteira e não linear, **teoria dos grafos**, modelos estocásticos, teoria da decisão e filas | Implementação em código |
 | **EPR0004**, Simulação de Sistemas (60 h) | Histórico | Técnicas de simulação com **implementação de algoritmos** | Linguagem usada |
 | **EPR0027**, Tópicos Especiais em PO (60 h, 2025.2) | Slides da aula 1 (PDF do professor) | Introdução à Ciência de Dados: análise univariada e multivariada, dados faltantes e outliers, Machine Learning supervisionado (regressão linear, árvores de decisão, KNN, métricas). Pré-requisito declarado: Python básico | Não é ementa oficial: mostra o que estava previsto, não o que você de fato usou. A ementa no histórico diz só "Variável" |
 | **EPR0022**, Sistemas de Suporte à Decisão (60 h, 2026.1) | — | — | Sem ementa no histórico e sem contato com o professor. **Não usar como comprovação** |
+
+**Relato sobre as turmas cursadas**
+
+- [x] **CIC0007:** a turma usou Python e seguiu o conteúdo da ementa. Não houve projeto, recursão nem estudo de estruturas de dados além do conteúdo listado, como vetores e estruturas heterogêneas.
+- [x] **EST0001:** a turma usou R e seguiu o conteúdo da ementa, sem projeto, recursão ou estudo de estruturas de dados além do que consta nela.
 
 **Disciplinas de matemática que ficaram fora da lista e valem entrar no mapa da Semana 3:**
 - **Cálculo 1, 2 e 3** (MAT0025, MAT0026, MAT0027) e **Álgebra Linear** (MAT0031).
@@ -71,7 +76,6 @@ O "histórico completo" da UnB já traz a ementa da maioria das disciplinas. A t
 
 ## Pendências em aberto
 
-- [ ] Revisar o que você lembra de CIC0007 e EST0001: linguagem, projetos, recursão ou estruturas de dados.
 - [ ] Lembrar o que foi de fato feito no EPR0027 (linguagem, projetos, relatórios). Esse registro é a evidência de Python e ML para o currículo.
 - [ ] Resposta da SAA com os documentos em inglês.
 - [ ] Simulado de IELTS, carga semanal e orçamento, e o e-mail aos recomendantes (os três do `tasks.md`).
