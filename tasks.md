@@ -21,7 +21,7 @@ Semanas de segunda a domingo.
 
 **Documentos**
 - [x] Localizar o diploma e verificar quais documentos em inglês a UnB oferece.
-- [ ] Ler as orientações oficiais de tradução e envio de documentos internacionais.
+- [x] Ler as orientações oficiais de tradução e envio de documentos internacionais.
 - [ ] Confirmar as 18 h/semana e o orçamento da preparação (exame, traduções, certificados).
 - [ ] Preparar o e-mail convite para os três recomendantes.
 

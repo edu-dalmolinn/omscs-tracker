@@ -17,6 +17,7 @@ Informações relevantes que surgiram ao executar as tasks. A fonte principal co
 - declaração de tradução do diploma, com os mesmos dizeres do diploma em português.
 
 **Situação:**
+- [x] Ler as páginas oficiais da Georgia Tech sobre tradução e envio de documentos.
 - [x] Diploma e histórico em português salvos no drive.
 - [x] E-mail à SAA pedindo o histórico e a declaração de tradução do diploma em inglês. A primeira tentativa foi bloqueada (23/11/2026) porque o endereço foi digitado errado (`saaantedimento`). Foi reenviado para `saaatendimento@unb.br` com sucesso. Para histórico e diploma, o portal da UnB também cita `rdgsaa@unb.br` (a confirmar), caso não haja resposta.
 - [ ] Aguardar a resposta da SAA e conferir se os documentos são oficiais, com código de verificação.
@@ -25,7 +26,7 @@ Informações relevantes que surgiram ao executar as tasks. A fonte principal co
 - Na candidatura, o FAQ do OMSCS pede o histórico no idioma original **e** uma tradução em inglês, que pode ser não oficial. Depois da admissão, pede-se uma cópia oficial para conferência.
 - A regra geral da Graduate Education diz: se a instituição emite documentos oficiais em inglês, não é preciso enviar a versão em português nem tradução. Se não emite, é preciso uma tradução juramentada, feita por um serviço profissional e palavra por palavra.
 - A página do Brasil lista só a qualificação aceita (Bacharel, com pelo menos 5 anos de estudo). Ela não cita outros documentos nem avaliação de credenciais.
-- As páginas que li **não dizem** se o diploma precisa ser enviado separado quando o histórico já mostra que o curso foi concluído. O requisito geral é "evidence of award" do bacharelado até a matrícula.
+- Na candidatura, anexe o diploma se o histórico não informar o grau concedido e a data da concessão.
 
 **Impacto no plano:**
 - Se a UnB emitir os documentos oficialmente em inglês, a tradução juramentada das Semanas 4 e 5 provavelmente não será necessária. Confirmar no portal da candidatura (Semana 10).
@@ -34,6 +35,8 @@ Informações relevantes que surgiram ao executar as tasks. A fonte principal co
 **Fontes:**
 - [OMSCS Prospective Student FAQs](https://omscs.gatech.edu/prospective-student-faqs)
 - [Georgia Tech Grad, Before You Apply](https://grad.gatech.edu/admissions/international/before-you-apply)
+- [Georgia Tech Grad, Ready to Apply — etapa 4: envio na candidatura](https://grad.gatech.edu/admissions/international/ready-to-apply)
+- [Georgia Tech Grad, After You Apply — etapa 9: envio após a admissão](https://grad.gatech.edu/admissions/international/after-you-apply)
 - [Country-Specific Requirements](https://grad.gatech.edu/admissions/international/country-specific-requirements)
 - [Academic Documents and Credential Evaluations](https://catalog.gatech.edu/admissions/grad/academic-documents-evaluations/) (não consegui abrir esta página)
 
@@ -71,7 +74,6 @@ O "histórico completo" da UnB já traz a ementa da maioria das disciplinas. A t
 - [ ] Revisar o que você lembra de CIC0007 e EST0001: linguagem, projetos, recursão ou estruturas de dados.
 - [ ] Lembrar o que foi de fato feito no EPR0027 (linguagem, projetos, relatórios). Esse registro é a evidência de Python e ML para o currículo.
 - [ ] Resposta da SAA com os documentos em inglês.
-- [ ] Ler as páginas oficiais da Georgia Tech sobre tradução e envio de documentos.
 - [ ] Simulado de IELTS, carga semanal e orçamento, e o e-mail aos recomendantes (os três do `tasks.md`).
 
 ## Para as próximas semanas
