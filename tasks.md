@@ -3,7 +3,8 @@
 Semanas de segunda a domingo.
 
 **Prazo oficial:** 01/03/2027, 23h59 ET · **Meta de envio:** 20/02/2027
-**Carga-alvo:** 18 h/semana. São 10 h de computação, 6 h de IELTS e 2 h de documentos. A carga ainda precisa ser confirmada na Semana 1.
+**Carga semanal confirmada:** 18 h/semana. São 10 h de computação, 6 h de IELTS e 2 h de documentos.
+**Objetivo da preparação:** maximizar as chances de aprovação no OMSCS.
 
 > As datas são metas pessoais. Se o curso ou o exame tiverem outra estrutura ou outras vagas, ajuste as semanas e mantenha os marcos em **negrito**.
 
@@ -22,7 +23,7 @@ Semanas de segunda a domingo.
 **Documentos**
 - [x] Localizar o diploma e verificar quais documentos em inglês a UnB oferece.
 - [x] Ler as orientações oficiais de tradução e envio de documentos internacionais.
-- [ ] Confirmar as 18 h/semana e o orçamento da preparação (exame, traduções, certificados).
+- [x] Confirmar as 18 h/semana de preparação.
 - [ ] Preparar o e-mail convite para os três recomendantes.
 
 **Entrega:** nota diagnóstica por habilidade, ementas solicitadas e carga semanal confirmada.
@@ -32,8 +33,8 @@ Semanas de segunda a domingo.
 ## Semana 2 — 30/11 a 06/12 · Recomendantes e escolha do curso
 
 **Computação**
-- [ ] Comparar a rota universitária (disciplinas com créditos) com os certificados GTx da edX (OOP com Java e Data Structures and Algorithms).
-- [ ] Para a opção escolhida, conferir pré-requisitos, módulos, avaliações, custo e prazo de emissão do certificado.
+- [ ] Comparar a rota universitária (disciplinas com créditos) com os certificados GTx da edX (OOP com Java e Data Structures and Algorithms) e identificar qual comprova melhor a preparação em computação para o OMSCS dentro do cronograma.
+- [ ] Para a opção escolhida, conferir pré-requisitos, módulos, avaliações e prazo de emissão do certificado.
 - [ ] **Até 06/12: escolher e se matricular na formação complementar.**
 - [ ] Começar o módulo 1 de OOP/Java.
 
@@ -81,9 +82,9 @@ Semanas de segunda a domingo.
 **Documentos**
 - [ ] Enviar o currículo e o resumo aos recomendantes que aceitaram.
 - [ ] Se algum recusou ou não respondeu, convidar um substituto.
-- [ ] Pedir orçamento e prazo de tradução dos documentos acadêmicos.
+- [ ] Confirmar o prazo de tradução dos documentos acadêmicos, se necessário.
 
-**Entrega:** recomendantes com os materiais em mãos e tradução orçada.
+**Entrega:** recomendantes com os materiais em mãos e prazo de tradução confirmado, se necessário.
 
 ---
 
@@ -96,7 +97,7 @@ Semanas de segunda a domingo.
 - [ ] Fazer um simulado completo de Reading e Listening.
 
 **Documentos**
-- [ ] Contratar a tradução, se necessário.
+- [ ] Solicitar a tradução, se necessário.
 
 **Entrega:** sem atraso acumulado no curso.
 
@@ -223,7 +224,7 @@ Semanas de segunda a domingo.
 - [ ] **15/02: segunda tentativa, só se necessária.**
 
 **Documentos**
-- [ ] **16–20/02: revisão final de todas as informações, pagamento de US$105 e envio da candidatura.**
+- [ ] **16–20/02: revisão final de todas as informações e envio da candidatura.**
 - [ ] Avaliar a opção de Priority Decision, se a documentação estiver completa.
 
 **Entrega:** candidatura enviada até 20/02.

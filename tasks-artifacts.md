@@ -91,13 +91,32 @@ Simulado completo das quatro habilidades, concluído em 25/11/2026.
 - **Prioridade do plano de estudo:** Speaking primeiro, depois Writing e Listening. Subir esses três em 0,5 a 1,0 cada leva a média para perto de 7,0.
 - O simulado não é a prova oficial, e a correção de Writing e Speaking pode variar. Vale repetir um simulado depois de algumas semanas de estudo.
 
+### 4. Mensagem de convite aos recomendantes
+
+Modelo de WhatsApp para o supervisor técnico do trabalho, que acompanhou meu trabalho por mais de um ano. O nome fica como `[nome]` porque o repositório é público. Para o orientador do TCC e o professor de Pesquisa Operacional, adaptar a justificativa.
+
+> Boa tarde, [nome]!
+>
+> Estou preparando minha candidatura para um mestrado em Ciência da Computação na universidade americana Georgia Tech e queria saber se você poderia escrever uma carta de recomendação para mim. Pensei em você porque foi meu gerente por mais de um ano e acompanhou de perto o meu trabalho no BB.
+>
+> Se topar, vou cadastrar o seu email e a própria universidade vai entrar em contato com você para combinar o envio. Você acha que consegue escrever essa carta até o dia 31 de janeiro de 2027?
+>
+> Caso ajude, posso te enviar meu currículo e um resumo do que fizemos juntos.
+>
+> Obrigado desde já!
+
+- [ ] Enviar ao supervisor do trabalho (prazo do convite: 30/11).
+- [ ] Adaptar e enviar ao orientador do TCC e ao professor de Pesquisa Operacional.
+
 ---
+
+A carga semanal está confirmada em **18 h** (10 h de computação, 6 h de IELTS e 2 h de documentos).
 
 ## Pendências em aberto
 
 - [ ] Lembrar o que foi de fato feito no EPR0027 (linguagem, projetos, relatórios). Esse registro é a evidência de Python e ML para o currículo.
 - [ ] Resposta da SAA com os documentos em inglês.
-- [ ] Carga semanal e orçamento, e o e-mail aos recomendantes (os três do `tasks.md`).
+- [ ] Convidar os três recomendantes (modelo no item 4; só o texto do supervisor está pronto).
 
 ## Para as próximas semanas
 
