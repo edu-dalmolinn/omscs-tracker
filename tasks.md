@@ -16,8 +16,8 @@ Semanas de segunda a domingo.
 - [x] Revisar o que você lembra de CIC0007 e EST0001: linguagem usada, projetos e se houve recursão ou estruturas de dados.
 
 **IELTS**
-- [ ] Fazer um simulado completo de IELTS Academic com correção de Writing e Speaking.
-- [ ] Registrar a nota por habilidade e comparar com o mínimo: geral 7,5; L/R/S 6,5; W 5,5.
+- [x] Fazer um simulado completo de IELTS Academic com correção de Writing e Speaking.
+- [x] Registrar a nota por habilidade e comparar com o mínimo: geral 7,5; L/R/S 6,5; W 5,5.
 
 **Documentos**
 - [x] Localizar o diploma e verificar quais documentos em inglês a UnB oferece.

@@ -2,7 +2,7 @@
 
 Informações relevantes que surgiram ao executar as tasks. A fonte principal continua sendo o `tasks.md`. Este documento guarda o que descobrimos ao longo do caminho.
 
-**Última atualização:** 23/11/2026 (Semana 1)
+**Última atualização:** 25/11/2026 (Semana 1)
 
 > Este repositório é publicado no GitHub Pages. Por isso o documento **não** traz dados pessoais (matrícula, CPF, data de nascimento, notas).
 
@@ -72,13 +72,32 @@ O "histórico completo" da UnB já traz a ementa da maioria das disciplinas. A t
 - Quatro atividades em aula (50%) e dois relatórios técnicos com apresentação oral (50%).
 - Bibliografia: Géron, *Hands-On Machine Learning with Scikit-Learn, Keras, and TensorFlow*.
 
+### 3. Simulado de IELTS Academic
+
+Simulado completo das quatro habilidades, concluído em 25/11/2026.
+
+| Habilidade | Simulado (25/11/2026) | Mínimo da Georgia Tech | Situação |
+|---|---|---|---|
+| Listening | **6,5** | 6,5 | No limite do mínimo, sem folga |
+| Reading | **7,5** | 6,5 | 1,0 acima do mínimo |
+| Writing | **5,5** | 5,5 | No limite do mínimo, sem folga |
+| Speaking | **5,5** | 6,5 | **1,0 abaixo do mínimo** |
+| Geral (média) | **6,5** (6,25 arredondado) | 7,0 (o `tasks.md` registra 7,5; a confirmar) | **0,5 abaixo do mínimo** |
+
+**Leitura do resultado:**
+- **Geral abaixo do mínimo:** a média é 6,25, que o IELTS arredonda para 6,5. Faltam 0,5 para o 7,0 (ou 1,0 para o 7,5 do `tasks.md`).
+- **Speaking reprova no critério por habilidade:** 5,5 está 1,0 abaixo do mínimo de 6,5. É o principal ponto a melhorar.
+- **Listening e Writing estão exatamente no mínimo,** sem folga: uma pequena oscilação no dia da prova os deixa abaixo. O Reading (7,5) é o único com folga.
+- **Prioridade do plano de estudo:** Speaking primeiro, depois Writing e Listening. Subir esses três em 0,5 a 1,0 cada leva a média para perto de 7,0.
+- O simulado não é a prova oficial, e a correção de Writing e Speaking pode variar. Vale repetir um simulado depois de algumas semanas de estudo.
+
 ---
 
 ## Pendências em aberto
 
 - [ ] Lembrar o que foi de fato feito no EPR0027 (linguagem, projetos, relatórios). Esse registro é a evidência de Python e ML para o currículo.
 - [ ] Resposta da SAA com os documentos em inglês.
-- [ ] Simulado de IELTS, carga semanal e orçamento, e o e-mail aos recomendantes (os três do `tasks.md`).
+- [ ] Carga semanal e orçamento, e o e-mail aos recomendantes (os três do `tasks.md`).
 
 ## Para as próximas semanas
 
