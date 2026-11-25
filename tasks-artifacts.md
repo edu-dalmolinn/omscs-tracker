@@ -106,7 +106,21 @@ Modelo de WhatsApp para o supervisor técnico do trabalho, que acompanhou meu tr
 > Obrigado desde já!
 
 - [ ] Enviar ao supervisor do trabalho (prazo do convite: 30/11).
-- [ ] Adaptar e enviar ao orientador do TCC e ao professor de Pesquisa Operacional.
+- [ ] Adaptar e enviar ao orientador do TCC.
+
+**Modelo para o professor com quem a relação foi menos próxima.** Reforça em quais disciplinas ele foi meu professor e dá uma saída fácil, para ele recusar sem constrangimento se não se sentir à vontade. Preencher `[nome]` e as disciplinas.
+
+> Boa tarde, professor [nome]!
+>
+> Estou preparando minha candidatura para um mestrado em Ciência da Computação na universidade americana Georgia Tech e queria saber se o senhor poderia escrever uma carta de recomendação para mim. Pensei no senhor porque fui seu aluno em [disciplinas] e as matérias foram importantes na minha preparação para essa área.
+>
+> Sei que não tivemos um contato muito próximo, então, se preferir não escrever, fique à vontade, sem problema nenhum. Se topar, posso enviar meu currículo, meu histórico e um resumo dos trabalhos que fiz nas disciplinas para facilitar.
+>
+> Nesse caso, vou cadastrar o seu email e a própria universidade vai entrar em contato com o senhor para combinar o envio. O senhor acha que consegue escrever essa carta até o dia 31 de janeiro de 2027?
+>
+> Obrigado desde já!
+
+- [ ] Enviar ao professor de Pesquisa Operacional.
 
 ---
 
@@ -116,7 +130,7 @@ A carga semanal está confirmada em **18 h** (10 h de computação, 6 h de IELTS
 
 - [ ] Lembrar o que foi de fato feito no EPR0027 (linguagem, projetos, relatórios). Esse registro é a evidência de Python e ML para o currículo.
 - [ ] Resposta da SAA com os documentos em inglês.
-- [ ] Convidar os três recomendantes (modelo no item 4; só o texto do supervisor está pronto).
+- [ ] Convidar os três recomendantes (modelos no item 4, falta só o do orientador do TCC).
 
 ## Para as próximas semanas
 
