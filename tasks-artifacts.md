@@ -106,7 +106,7 @@ Modelo de WhatsApp para o supervisor técnico do trabalho, que acompanhou meu tr
 > Obrigado desde já!
 
 - [ ] Enviar ao supervisor do trabalho (prazo do convite: 30/11).
-- [ ] Adaptar e enviar ao orientador do TCC.
+- [x] Adaptar e enviar ao orientador do TCC.
 
 **Modelo para o professor com quem a relação foi menos próxima.** Reforça em quais disciplinas ele foi meu professor e dá uma saída fácil, para ele recusar sem constrangimento se não se sentir à vontade. Preencher `[nome]` e as disciplinas.
 
